@@ -20,23 +20,23 @@ import time
 
 # Se programó una propuesta encontrada en:
 # Sharma, V. (2015). A new approach to improve worst case efficiency of Bubble Sort. International Research Journal of Computer Science (IRJCS), 2(6), 54–58. https://www.researchgate.net/publication/313647211_A_New_Approach_to_Improve_Worst_Case_Efficiency_of_Bubble_Sort
-# En escencia se propone un preordenamiento de la lista de datos y luego se aplica el método de burbuja convencional.
+# En escencia se propone un una preparación de la lista de datos y luego se aplica el método de burbuja convencional.
 # Revisando esta propuesta acorta notablemente el tiempo de ejecución de los algoritmos
 
 def preOrderBubble(arrPO):
-    arrPO = arrPO[::-1]  # Se invierte la Lista
-    front = 0
-    last = len(arrPO) - 1
+  arrPO = arrPO[::-1]  # Se invierte la Lista
+  front = 0
+  last = len(arrPO) - 1
 
-    while front < last:  # tomar el primer elemento y el último del arreglo y compararlos.
-        if arrPO[front] > arrPO[last]: # Si el primero es mayor que el último intercambia
-            arrPO[front], arrPO[last] = arrPO[last], arrPO[front]
-        
-        front += 1 # Avanza en el siguiente elemento
-        last -= 1 # Retrocede al anterior elemento
-      #Se cicla hasta que se llega a los elementos centrales
+  while front < last:  # tomar el primer elemento y el último del arreglo y compararlos.
+    if arrPO[front] > arrPO[last]: # Si el primero es mayor que el último intercambia
+        arrPO[front], arrPO[last] = arrPO[last], arrPO[front]
+    
+    front += 1 # Avanza en el siguiente elemento
+    last -= 1 # Retrocede al anterior elemento
+    #Se cicla hasta que se llega a los elementos centrales
 
-    return arrPO
+  return arrPO
 
 
 def bubbles( numArr ):
