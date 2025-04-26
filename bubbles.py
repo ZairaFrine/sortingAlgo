@@ -22,9 +22,7 @@ def bubbles( numArr ):
     ctrl = 0
     for i in range(len(numArr) - 1):
       if numArr[i] > numArr[i+1]:
-        aux = numArr[i]
-        numArr[i]=numArr[i+1]
-        numArr[i+1]=aux
+        numArr[i], numArr[i+1] = numArr[i+1], numArr[i]
         ctrl = 1
   return numArr
 
